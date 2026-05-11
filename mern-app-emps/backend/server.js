@@ -9,14 +9,7 @@ dotenv.config();
 const app = exp();
 
 // cors middleware
-app.use(
-  cors({
-    origin: [
-      "https://week-6-psi.vercel.app",
-    ],
-    credentials: true,
-  }),
-);
+app.use(cors());
 
 // body parser middleware
 app.use(exp.json());
