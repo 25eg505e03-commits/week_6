@@ -11,7 +11,10 @@ const app = exp();
 // cors middleware
 app.use(
   cors({
-    origin: ["https://week-6-bjkg.onrender.com"],
+    origin: [
+      "https://week-6-psi.vercel.app",
+    ],
+    credentials: true,
   }),
 );
 
