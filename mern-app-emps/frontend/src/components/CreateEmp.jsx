@@ -18,11 +18,14 @@ function CreateEmp() {
     try {
       setLoading(true);
       //make HTTP POST req
-      let res = await fetch("https://week-6-bjkg.onrender.com/emp-api/employees", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newEmpObj),
-      });
+      let res = await fetch(
+  `${import.meta.env.VITE_API_URL}/emp-api/employees`,
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newEmpObj),
+  }
+);
 
       if (res.status === 201) {
         //navigate to employees component programatically
