@@ -11,7 +11,7 @@ const app = exp();
 // cors middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://week-6-bjkg.onrender.com"],
   }),
 );
 

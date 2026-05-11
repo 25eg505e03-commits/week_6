@@ -19,10 +19,10 @@ function ListOfEmps() {
 
   //  Delete employee
   const deleteEmployeeById = async (id) => {
-    try {
-      let res = await axios.delete(
-        `http://localhost:4000/emp-api/employees/${id}`
-      );
+  try {
+    let res = await axios.delete(
+      `${import.meta.env.VITE_API_URL}/emp-api/employees/${id}`
+    );
 
       if (res.status === 200) {
         getEmps(); 
@@ -35,9 +35,9 @@ function ListOfEmps() {
   //  Get all employees
   async function getEmps() {
     try {
-      let res = await axios.get(
-        "http://localhost:4000/emp-api/employees"
-      );
+  let res = await axios.get(
+    `${import.meta.env.VITE_API_URL}/emp-api/employees`
+  );
 
       if (res.status === 200) {
         setEmps(res.data.payload);

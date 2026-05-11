@@ -26,11 +26,11 @@ function EditEmployee() {
   },[state]);
 
   const saveModifiedEmp = async (modifiedEmp) => {
-  try {
-    const res = await axios.put(
-      `http://localhost:4000/emp-api/employees/${state?._id}`,
-      modifiedEmp
-    );
+ try {
+  const res = await axios.put(
+    `${import.meta.env.VITE_API_URL}/emp-api/employees/${state?._id}`,
+    modifiedEmp
+  );
 
     if (res.status === 200) {
       Navigate("/list");
