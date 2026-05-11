@@ -1,0 +1,20 @@
+{
+  "name": "mern-app-emps",
+  "version": "1.0.0",
+  "description": "- Create HTTP Server using Express - Create Employee Schema(name,email,mobile,designation & companyName)and model  - Define REST API routes for  - Create Employee  - Read all employees  - Edit employee  - Delete Employee",
+  "homepage": "https://github.com/rajeshThappeta/mern-app-emps#readme",
+  "bugs": {
+    "url": "https://github.com/rajeshThappeta/mern-app-emps/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshThappeta/mern-app-emps.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
