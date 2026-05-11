@@ -17,6 +17,10 @@ app.use(exp.json());
 // emp api middleware
 app.use("/emp-api", empRoute);
 
+app.get("/", (req, res) => {
+  res.send("Backend Running");
+});
+
 // DB connection
 mongoose
   .connect(process.env.MONGO_URI)
