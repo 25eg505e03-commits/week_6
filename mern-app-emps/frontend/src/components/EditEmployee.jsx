@@ -4,7 +4,7 @@ import { useLocation } from 'react-router'
 import axios from 'axios'
 import { useNavigate } from 'react-router';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const API_URL = import.meta.env.VITE_API_URL || "https://week-6-bjkg.onrender.com";
 
 function EditEmployee() {
   const { register, handleSubmit,formState:{errors},setValue } = useForm();

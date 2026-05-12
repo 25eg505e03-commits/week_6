@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const API_URL = import.meta.env.VITE_API_URL || "https://week-6-bjkg.onrender.com";
 
 function CreateEmp() {
   const [loading, setLoading] = useState(false);
@@ -19,6 +19,7 @@ function CreateEmp() {
   const onFormSubmit = async (newEmpObj) => {
     try {
       setLoading(true);
+      console.log("POST URL:", `${API_URL}/emp-api/employees`);
       //make HTTP POST req
       const res = await fetch(`${API_URL}/emp-api/employees`, {
         method: "POST",
