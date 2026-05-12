@@ -3,11 +3,18 @@ import { EmpModel } from "../models/EmpModel.js";
 export const empRoute = exp.Router();
 
 //Create emp
-empRoute.post("/employees", async (req, res) => {
-  const newEmp = req.body;
-  const empDoc = new EmpModel(newEmp);
-  await empDoc.save();
-  res.status(201).json({ message: "Emp created" });
+empRoute.post("/employees", async (req, res, next) => {
+  try {
+    const newEmp = req.body;
+    console.log("Received Data:", newEmp);
+    const empDoc = new EmpModel(newEmp);
+    await empDoc.save();
+    res.status(201).json({
+      message: "Emp created",
+    });
+  } catch (err) {
+    next(err);
+  }
 });
 //Read all emps
 empRoute.get("/employees", async (req, res) => {
