@@ -4,6 +4,8 @@ import { useLocation } from 'react-router'
 import axios from 'axios'
 import { useNavigate } from 'react-router';
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+
 function EditEmployee() {
   const { register, handleSubmit,formState:{errors},setValue } = useForm();
   const Navigate = useNavigate();
@@ -28,7 +30,7 @@ function EditEmployee() {
   const saveModifiedEmp = async (modifiedEmp) => {
  try {
   const res = await axios.put(
-    `${import.meta.env.VITE_API_URL}/emp-api/employees/${state?._id}`,
+    `${API_URL}/emp-api/employees/${state?._id}`,
     modifiedEmp
   );
 

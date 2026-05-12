@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+
 function CreateEmp() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -18,22 +20,24 @@ function CreateEmp() {
     try {
       setLoading(true);
       //make HTTP POST req
-      let res = await fetch(
-  `${import.meta.env.VITE_API_URL}/emp-api/employees`,
-  {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(newEmpObj),
-  }
-);
+      const res = await fetch(`${API_URL}/emp-api/employees`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newEmpObj),
+      });
 
       if (res.status === 201) {
         //navigate to employees component programatically
         navigate("/list");
       } else {
-        let errorRes = await res.json();
-        console.log("error responce is ", errorRes);
-        throw new Error(errorRes.reason);
+        const contentType = res.headers.get("content-type") || "";
+        const errorBody = contentType.includes("application/json")
+          ? await res.json()
+          : await res.text();
+        console.log("error response is ", errorBody);
+        throw new Error(
+          errorBody?.reason || errorBody?.message || `Request failed with status ${res.status}`
+        );
       }
     } catch (err) {
       console.log("err in catch", err);
