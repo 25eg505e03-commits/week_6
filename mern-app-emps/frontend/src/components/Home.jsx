@@ -32,7 +32,7 @@ import Test from "../components/Test"
       <button onClick={incrementCounter} className="bg-blue-500 text-white p-2 mt-4 rounded">
         change
       </button>
-      < Test />
+      <Test />
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import {useForm} from 'react-hook-form'
-import { useLocation } from 'react-router'
+import { useLocation } from 'react-router-dom'
 import axios from 'axios'
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const API_URL = import.meta.env.VITE_API_URL || "https://week-6-bjkg.onrender.com";
 
@@ -10,9 +10,6 @@ function EditEmployee() {
   const { register, handleSubmit,formState:{errors},setValue } = useForm();
   const Navigate = useNavigate();
 
-  const onFormSubmit = (editedEmp) => {
-    console.log("Edited employee:", editedEmp);
-  };
   
     const { state } = useLocation();
   console.log(state);
