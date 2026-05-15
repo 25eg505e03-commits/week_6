@@ -1,3 +1,4 @@
+// import routing tools and components
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/RootLayout";
 import Home from "./components/Home";
@@ -6,7 +7,9 @@ import ListOfEmps from "./components/ListOfEmps";
 import Employee from "./components/Employee";
 import EditEmployee from "./components/EditEmployee";
 
+// main app component
 function App() {
+  // define app routes
   const routerObj = createBrowserRouter([
     {
       path: "/",
@@ -21,6 +24,7 @@ function App() {
     },
   ]);
 
+  // provide router to app
   return <RouterProvider router={routerObj} />;
 }
 

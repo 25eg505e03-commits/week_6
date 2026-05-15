@@ -4,24 +4,27 @@ import { empRoute } from "./API/empApp.js";
 import cors from "cors";
 import dotenv from "dotenv";
 
+// load environment variables
 dotenv.config();
 
+// create express app
 const app = exp();
 
-// cors middleware
+// allow cross-origin requests
 app.use(cors());
 
-// body parser middleware
+// parse JSON data
 app.use(exp.json());
 
-// emp api middleware
+// use employee routes
 app.use("/emp-api", empRoute);
 
+// basic health check route
 app.get("/", (req, res) => {
   res.send("Backend Running");
 });
 
-// DB connection
+// connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -29,15 +32,16 @@ mongoose
 
     const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, () =>
-  console.log(`server listening on port ${PORT}`)
-);
+    // start server
+    app.listen(PORT, () =>
+      console.log(`server listening on port ${PORT}`)
+    );
   })
   .catch((err) => {
     console.log("err in DB connection", err.message);
   });
 
-// error handling middleware
+// handle errors
 app.use((err, req, res, next) => {
   console.log("err in middleware:", err.message);
 

@@ -1,8 +1,11 @@
+// import express and model
 import exp from "express";
 import { EmpModel } from "../models/EmpModel.js";
+
+// create router for employee routes
 export const empRoute = exp.Router();
 
-//Create emp
+// create employee
 empRoute.post("/employees", async (req, res, next) => {
   try {
     const newEmp = req.body;
@@ -16,12 +19,14 @@ empRoute.post("/employees", async (req, res, next) => {
     next(err);
   }
 });
-//Read all emps
+
+// get all employees
 empRoute.get("/employees", async (req, res) => {
   let empList = await EmpModel.find();
   res.status(200).json({ message: "list of emps", payload: empList });
 });
-//Update emp id
+
+// update employee
 empRoute.put("/employees/:id", async (req, res) => {
   const modifiedEmp = req.body;
   //find and update
@@ -38,7 +43,7 @@ empRoute.put("/employees/:id", async (req, res) => {
   res.status(200).json({ message: "employee updated", payload: updatedEmp });
 });
 
-//Delete emp by id
+// delete employee
 empRoute.delete("/employees/:id", async (req, res) => {
   let deletedEmp = await EmpModel.findByIdAndDelete(req.params.id);
   if (!deletedEmp) {

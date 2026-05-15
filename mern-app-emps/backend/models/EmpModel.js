@@ -1,5 +1,7 @@
+// import mongoose tools
 import { Schema, model } from "mongoose";
 
+// define employee data structure
 const empSchema = new Schema(
   {
     name: {
@@ -26,5 +28,5 @@ const empSchema = new Schema(
   { strict: "throw", versionKey: false, timestamps: true },
 );
 
-//export modekl
+// export the model
 export const EmpModel = model("emp", empSchema);

@@ -1,10 +1,14 @@
+// import React hooks and tools
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+// API base URL
 const API_URL = import.meta.env.VITE_API_URL || "https://week-6-bjkg.onrender.com";
 
+// list employees component
 function ListOfEmps() {
+  // store employee list
   const [emps, setEmps] = useState([]);
   const navigate = useNavigate();
 
@@ -48,11 +52,12 @@ function ListOfEmps() {
     }
   }
 
-  // Load data on mount
+  // load data when component mounts
   useEffect(() => {
     getEmps();
   }, []);
 
+  // display employee list
   return (
     <div>
       <h1 className="text-4xl text-center">List of Employees</h1>
