@@ -1,30 +1,30 @@
-# 🚀 Employee Management System (MERN Stack)
+#  Employee Management System (MERN Stack)
 A modern, full-stack web application built with the MERN stack (MongoDB, Express.js, React, Node.js) for efficient employee management. This application provides a user-friendly interface to perform CRUD operations on employee records, featuring responsive design and seamless data handling.
 
-## 📋 Table of Contents
+##  Table of Contents
 
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [🚀 Installation & Setup](#-installation--setup)
-- [💻 Usage](#-usage)
-- [🎯 Learning Outcomes](#-learning-outcomes)
-- [🌐 Deployment](#-deployment)
-- [🤝 Contributing](#-contributing)
-- [👨‍💻 Author](#-author)
-- [📄 License](#-license)
+- [ Features](#-features)
+- [ Tech Stack](#️-tech-stack)
+- [ Project Structure](#-project-structure)
+- [ Installation & Setup](#-installation--setup)
+- [ Usage](#-usage)
+- [ Learning Outcomes](#-learning-outcomes)
+- [ Deployment](#-deployment)
+- [Contributing](#-contributing)
+- [ Author](#-author)
+- [ License](#-license)
 
-## ✨ Features
+## Features
 
-- **👥 Employee CRUD Operations**: Create, Read, Update, and Delete employee records
-- **📱 Responsive Design**: Optimized for desktop and mobile devices
-- **⚡ Real-time Updates**: Instant feedback and data synchronization
-- **🔍 Search & Filter**: Easily find and manage employee information
-- **🎨 Modern UI**: Clean and intuitive user interface with Tailwind CSS
-- **🛡️ Error Handling**: Robust error management and user feedback
-- **📊 Data Validation**: Client and server-side validation for data integrity
+- ** Employee CRUD Operations**: Create, Read, Update, and Delete employee records
+- ** Responsive Design**: Optimized for desktop and mobile devices
+- ** Real-time Updates**: Instant feedback and data synchronization
+- ** Search & Filter**: Easily find and manage employee information
+- ** Modern UI**: Clean and intuitive user interface with Tailwind CSS
+- ** Error Handling**: Robust error management and user feedback
+- ** Data Validation**: Client and server-side validation for data integrity
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React** - Component-based UI library
@@ -79,7 +79,7 @@ mern-app-emps/
 └── README.md
 ```
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -134,7 +134,7 @@ mern-app-emps/
    npm run dev
    ```
 
-## 💻 Usage
+##  Usage
 
 1. **Access the application:**
    Open your browser and navigate to `http://localhost:5173` (or the port shown in terminal)
@@ -156,7 +156,7 @@ mern-app-emps/
    - Click the "Delete" button on an employee card
    - Confirm deletion to remove the employee
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates proficiency in:
 
@@ -169,7 +169,7 @@ This project demonstrates proficiency in:
 - **Responsive Design**: Creating mobile-friendly interfaces
 - **Version Control**: Git workflow and collaboration
 
-## 🌐 Deployment
+##  Deployment
 
 ### Backend Deployment
 - Deploy to platforms like Heroku, Railway, or Vercel
@@ -181,7 +181,7 @@ This project demonstrates proficiency in:
 - Deploy to Netlify, Vercel, or GitHub Pages
 - Update API URLs for production environment
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
